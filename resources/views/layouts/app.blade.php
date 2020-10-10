@@ -110,7 +110,7 @@
                         <a href="#" class="l-a">店舗掲載について</a>
                     </li>
                     <li class="l-li">
-                        <a href="#" class="l-a">利用規約</a>
+                        <a href="{{ route('rule.show')}}" class="l-a">利用規約</a>
                     </li>
                     <li class="l-li">
                         <a href="{{ route('privacy.show')}}" class="l-a">プライバシーポリシー</a>

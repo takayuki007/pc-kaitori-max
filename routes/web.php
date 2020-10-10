@@ -22,3 +22,4 @@ Route::get('/shop', 'ShopController@show')->name('shop.show');
 Route::get('/contact', 'ContactController@show')->name('contact.show');
 Route::get('/transaction', 'TransactionController@show')->name('transaction.show');
 Route::get('/privacy', 'PrivacyController@show')->name('privacy.show');
+Route::get('/rule', 'RuleController@show')->name('rule.show');
