@@ -116,7 +116,7 @@
                         <a href="#" class="l-a">プライバシーポリシー</a>
                     </li>
                     <li class="l-li">
-                        <a href="#" class="l-a">特定商取引法に基づく表記</a>
+                        <a href="{{ route('transaction.show')}}" class="l-a">特定商取引法に基づく表記</a>
                     </li>
                     <li class="l-li">
                         <a href="{{ route('contact.show')}}" class="l-a">お問合せ</a>
