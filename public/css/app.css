@@ -1,0 +1,303 @@
+@import url(https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap);/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: #FFFFFB;
+  color: #003300;
+  font-size: 16px;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.l-a {
+  font-size: 20px;
+  color: #003300;
+  text-decoration: none;
+}
+
+.l-a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+.l-footer {
+  height: 80px;
+  width: 100%;
+  background: #AAB300;
+  margin-top: auto;
+}
+
+.l-footer-wrap {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.l-header {
+  height: 80px;
+  width: 100%;
+  background: #AAB300;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.l-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.l-logo {
+  font-size: 20px;
+  color: #003300;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.l-text {
+  width: 100%;
+  height: 20%;
+  font-size: 8px;
+  text-align: center;
+}
+
+.l-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.l-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.c-alert-success {
+  margin-top: 8px;
+  color: #3490dc;
+}
+
+.c-btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: #AAB300;
+  border: none;
+  font-size: 16px;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.c-btn:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.c-file {
+  margin-bottom: 32px;
+}
+
+.c-input {
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+}
+
+.c-invalid-feedback {
+  display: inline-block;
+  color: #e3342f;
+  margin-top: 8px;
+}
+
+.c-option {
+  width: 100%;
+}
+
+.c-select {
+  width: 20%;
+  height: 48px;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.c-text {
+  font-size: 16px;
+  color: #003300;
+  margin-bottom: 16px;
+}
+
+.c-textarea {
+  width: 100%;
+  height: 600px;
+  font-size: 16px;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+}
+
+.c-title {
+  width: 100%;
+  height: 60px;
+  background: #AAB300;
+  padding-left: 16px;
+  line-height: 60px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+}
+
+.p-form {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.p-site-width {
+  width: 980px;
+  height: auto;
+  margin: 0 auto;
+}
+
