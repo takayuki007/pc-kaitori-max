@@ -1,0 +1,9 @@
+//ヘッダー部分
+.l-header{
+    height: 80px;
+    width: 100%;
+    background: $green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
