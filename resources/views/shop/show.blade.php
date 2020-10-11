@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '店舗詳細ページ')
+@section('title', '店舗詳細')
 @section('description', '店舗詳細ページです。')
 @section('keywords', '店舗詳細ページ,PC買取,ピーシー買取')
 
