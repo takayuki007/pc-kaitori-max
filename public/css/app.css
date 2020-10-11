@@ -464,6 +464,14 @@ body {
   margin-bottom: 32px;
 }
 
+@media screen and (max-width: 480px) {
+  .c-select {
+    width: 40%;
+    font-size: 12px;
+    height: 48px;
+  }
+}
+
 .c-table {
   width: 100%;
   height: auto;

@@ -4,4 +4,10 @@
     height: 48px;
     font-size: $font-size-m;
     margin-bottom: $margin-l;
+
+    @include sp(){
+        width: 40%;
+        font-size: $font-size-s;
+        height: 48px;
+    }
 }
