@@ -4,4 +4,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include sp(){
+        width: 100%;
+        height: 75%;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: $margin-m;
+        margin-top: $margin-m;
+    }
 }

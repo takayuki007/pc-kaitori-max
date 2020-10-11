@@ -143,10 +143,22 @@ body {
   line-height: 24px;
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
 .l-a {
   font-size: 20px;
   color: #003300;
   text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  .l-a {
+    font-size: 16px;
+  }
 }
 
 .l-a:hover {
@@ -162,12 +174,99 @@ body {
   margin-top: auto;
 }
 
+@media screen and (max-width: 480px) {
+  .l-footer {
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+  }
+}
+
+.l-footer-a {
+  font-size: 20px;
+  color: #003300;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  .l-footer-a {
+    font-size: 16px;
+  }
+}
+
+.l-footer-a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+.l-footer-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  .l-footer-li {
+    margin-bottom: 24px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.l-footer-logo {
+  font-size: 20px;
+  color: #003300;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .l-footer-logo {
+    font-size: 16px;
+    margin-bottom: 24px;
+    margin-left: 0;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.l-footer-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 480px) {
+  .l-footer-ul {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+  }
+}
+
 .l-footer-wrap {
   width: 100%;
   height: 75%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+  .l-footer-wrap {
+    width: 100%;
+    height: 75%;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 24px;
+    margin-top: 24px;
+  }
 }
 
 .l-header {
@@ -179,11 +278,24 @@ body {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 480px) {
+  .l-header {
+    width: 100%;
+    height: 40px;
+  }
+}
+
 .l-li {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  .l-li {
+    margin-right: 24px;
+  }
 }
 
 .l-logo {
@@ -193,6 +305,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .l-logo {
+    font-size: 16px;
+    margin-left: 24px;
+  }
 }
 
 .l-text {

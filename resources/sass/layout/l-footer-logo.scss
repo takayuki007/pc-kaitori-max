@@ -1,4 +1,5 @@
-.l-logo{
+//フッター部分
+.l-footer-logo{
     font-size: $font-size-l;
     color: $black-green;
     margin-left: $margin-ll;
@@ -8,6 +9,10 @@
 
     @include sp(){
         font-size: $font-size-m;
-        margin-left: $margin-m;
+        margin-bottom: $margin-m;
+        margin-left: 0;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
     }
 }
