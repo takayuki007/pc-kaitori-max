@@ -7,4 +7,10 @@
     line-height: 60px;
     box-sizing: border-box;
     margin-bottom: $margin-l;
+
+    @include sp(){
+        height: 48px;
+        margin-bottom: $margin-m;
+        line-height: 48px;
+    }
 }

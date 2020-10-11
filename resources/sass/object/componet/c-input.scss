@@ -6,4 +6,10 @@
     padding: $padding-ss;
     box-sizing: border-box;
     margin-bottom: $margin-l;
+
+    @include sp(){
+        height: 48px;
+        font-size: $font-size-s;
+        margin-bottom: $margin-m;
+    }
 }

@@ -340,6 +340,12 @@ body {
   text-decoration: none;
 }
 
+@media screen and (max-width: 480px) {
+  .c-a {
+    font-size: 12px;
+  }
+}
+
 .c-a:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -359,6 +365,13 @@ body {
   border: none;
   font-size: 16px;
   font-family: "M PLUS 1p", sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+  .c-btn {
+    height: 48px;
+    font-size: 12px;
+  }
 }
 
 .c-btn:hover {
@@ -393,6 +406,13 @@ body {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 480px) {
+  .c-info-title {
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
 .c-input {
   width: 100%;
   height: 60px;
@@ -400,6 +420,14 @@ body {
   padding: 8px;
   box-sizing: border-box;
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 480px) {
+  .c-input {
+    height: 48px;
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
 }
 
 .c-invalid-feedback {
@@ -460,6 +488,7 @@ body {
 @media screen and (max-width: 480px) {
   .c-text {
     font-size: 8px;
+    margin-bottom: 8px;
   }
 }
 
@@ -500,6 +529,14 @@ body {
   line-height: 60px;
   box-sizing: border-box;
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 480px) {
+  .c-title {
+    height: 48px;
+    margin-bottom: 24px;
+    line-height: 48px;
+  }
 }
 
 .c-tr {
