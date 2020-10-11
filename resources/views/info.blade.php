@@ -19,7 +19,7 @@
                 別途ご案内させていただきます。<br>
                 <br>
                 <br>
-                <a href="{{ route('contact.show')}}" class="l-a">お問合せはこちら</a>
+                <a href="{{ route('contact.show')}}" class="c-a">お問合せはこちら</a>
             </p>
         </div>
     </div>
