@@ -18,10 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/shop', 'ShopController@show')->name('shop.show');
+
+Route::get('/shop/new', 'ShopController@new')->name('shop.new');
+Route::get('/shop/show', 'ShopController@show')->name('shop.show');
+
 Route::get('/contact', 'ContactController@show')->name('contact.show');
+
 Route::get('/transaction', 'TransactionController@show')->name('transaction.show');
+
 Route::get('/privacy', 'PrivacyController@show')->name('privacy.show');
+
 Route::get('/rule', 'RuleController@show')->name('rule.show');
+
 Route::get('/info', 'InfoController@show')->name('info.show');
+
 Route::get('/unsubscribe', 'UnsubscribeController@show')->name('unsubscribe.show');

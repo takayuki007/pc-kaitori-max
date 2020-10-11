@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
-    public function show(){
-        return view('shop');
+    public function new(){
+        return view('shop.new');
+    }
+
+    public function show()
+    {
+        return view('shop.show');
     }
 }
