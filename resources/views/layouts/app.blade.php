@@ -26,7 +26,7 @@
     <div id="app" class="l-wrapper">
         <!--ヘッダー始まり-->
         <header class="l-header">
-            <p class="l-logo"><a href="#" class="l-a">PC買取</a></p>
+            <p class="l-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取</a></p>
             <ul class="l-ul">
                 @guest
                     <li class="l-li">
@@ -104,7 +104,7 @@
         <!--フッター始まり-->
         <footer class="l-footer">
             <div class="l-footer-wrap">
-                <p class="l-logo"><a href="#" class="l-a">PC買取</a></p>
+                <p class="l-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取</a></p>
                 <ul class="l-ul">
                     <li class="l-li">
                         <a href="{{ route('info.show')}}" class="l-a">店舗掲載について</a>
