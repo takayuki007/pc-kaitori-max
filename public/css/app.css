@@ -449,6 +449,12 @@ body {
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 480px) {
+  .c-text {
+    font-size: 8px;
+  }
+}
+
 .c-text-display {
   width: 100%;
   height: auto;
@@ -499,7 +505,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 24px;
+  height: 28px;
 }
 
 .p-form {

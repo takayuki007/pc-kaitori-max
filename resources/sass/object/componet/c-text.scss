@@ -3,4 +3,8 @@
     font-size: $font-size-m;
     color: $black-green;
     margin-bottom: $margin-s;
+
+    @include sp(){
+        font-size: $font-size-ss;
+    }
 }
