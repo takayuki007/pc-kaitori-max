@@ -107,7 +107,7 @@
                 <p class="l-logo"><a href="#" class="l-a">PC買取</a></p>
                 <ul class="l-ul">
                     <li class="l-li">
-                        <a href="#" class="l-a">店舗掲載について</a>
+                        <a href="{{ route('info.show')}}" class="l-a">店舗掲載について</a>
                     </li>
                     <li class="l-li">
                         <a href="{{ route('rule.show')}}" class="l-a">利用規約</a>
