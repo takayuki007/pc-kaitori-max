@@ -684,6 +684,12 @@ body {
   padding: 16px;
 }
 
+@media screen and (max-width: 480px) {
+  .u-td {
+    font-size: 12px;
+  }
+}
+
 .u-th {
   width: 30%;
   height: 100%;

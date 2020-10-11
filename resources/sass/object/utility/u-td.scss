@@ -6,4 +6,8 @@
     font-size: $font-size-m;
     box-sizing: border-box;
     padding: $padding-s;
+
+    @include sp(){
+        font-size: $font-size-s;
+    }
 }
