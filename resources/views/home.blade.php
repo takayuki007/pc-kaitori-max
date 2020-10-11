@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="p-site-width">
+    <div class="p-wrapper">
+        <h1 class="c-title">マイページ</h1>
+        <div class="p-wrapper">
+            <ul class="u-ul">
+                <h1 class="c-info-title">お気に入り店舗一覧</h1>
+                <li class="u-li">
+                    <div class="u-li-img">img</div>
+                    <a href="#" class="u-li-a">PC高価買取店B店</a>
+                </li>
+                <li class="u-li">
+                    <div class="u-li-img">img</div>
+                    <a href="#" class="u-li-a">PC高価買取店C店</a>
+                </li>
+            </ul>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
         </div>
     </div>
 </div>
