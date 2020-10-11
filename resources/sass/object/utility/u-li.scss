@@ -10,4 +10,8 @@
     padding-right: $padding-ll;
     padding-top: $padding-ss;
     padding-bottom: $padding-ss;
+
+    @include sp(){
+        padding: $padding-s;
+    }
 }

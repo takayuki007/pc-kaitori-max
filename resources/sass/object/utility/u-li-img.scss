@@ -4,4 +4,9 @@
     width: 10%;
     height: 100%;
     margin-right: 60px;
+
+    @include sp(){
+        width: 30%;
+        margin-right: $margin-s;
+    }
 }

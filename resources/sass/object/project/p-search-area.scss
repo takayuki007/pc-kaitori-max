@@ -8,4 +8,8 @@
     padding-left: 160px;
     padding-right: 160px;
     box-sizing: border-box;
+
+    @include sp(){
+        padding: $padding-m;
+    }
 }

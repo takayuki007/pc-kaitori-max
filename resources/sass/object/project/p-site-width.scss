@@ -3,4 +3,8 @@
     width: 980px;
     height: auto;
     margin: 0 auto;
+
+    @include sp(){
+        width: 80%;
+    }
 }

@@ -6,6 +6,12 @@
     color: $black-green;
     text-decoration: none;
 
+    @include sp(){
+        font-size: $font-size-s;
+        line-height: 88px;
+    }
+
+
     &:hover{
         cursor: pointer;
         text-decoration: underline;
