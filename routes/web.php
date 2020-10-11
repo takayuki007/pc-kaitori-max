@@ -24,3 +24,4 @@ Route::get('/transaction', 'TransactionController@show')->name('transaction.show
 Route::get('/privacy', 'PrivacyController@show')->name('privacy.show');
 Route::get('/rule', 'RuleController@show')->name('rule.show');
 Route::get('/info', 'InfoController@show')->name('info.show');
+Route::get('/unsubscribe', 'UnsubscribeController@show')->name('unsubscribe.show');
