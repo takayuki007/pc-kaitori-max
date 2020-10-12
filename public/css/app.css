@@ -434,6 +434,7 @@ body {
   display: inline-block;
   color: #e3342f;
   margin-top: 8px;
+  display: block;
 }
 
 .c-option {

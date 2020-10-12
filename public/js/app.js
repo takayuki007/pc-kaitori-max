@@ -1948,7 +1948,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['name', 'img', 'shopLink'],
   mounted: function mounted() {
     console.log('Component mounted.');
   }
@@ -37585,22 +37587,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "u-li" }, [
-      _c("div", { staticClass: "u-li-img" }, [_vm._v("img")]),
-      _vm._v(" "),
-      _c("a", { staticClass: "u-li-a", attrs: { href: "#" } }, [
-        _vm._v("PC高価買取店B店")
-      ])
+  return _c("li", { staticClass: "u-li" }, [
+    _c("img", { staticClass: "u-li-img", attrs: { src: "" + _vm.img } }),
+    _vm._v(" "),
+    _c("a", { staticClass: "u-li-a", attrs: { href: "" + _vm.shopLink } }, [
+      _vm._v(_vm._s(_vm.name))
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

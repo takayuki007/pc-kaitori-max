@@ -7,15 +7,15 @@
 @section('content')
 <div class="p-site-width">
     <form class="p-form" method="post" action="">
-        <h1 class="c-info-title">PC買取店A</h1>
+        <h1 class="c-info-title">{{ $shop->name }}</h1>
         <div class="p-info-area">
-            <div class="c-info-img">photo</div>
+            <img src="{{ asset('/storage/shop_img/'.$shop->img) }}" class="c-info-img">
             <div class="c-info-wrapper">
-                <p class="c-text">TEL: 03-0000-0000</p>
-                <p class="c-text">営業時間: 10：00〜17：00</p>
-                <p class="c-text">定休日: 毎週水曜日</p>
-                <p class="c-text">所在地: 東京都港区南青山1ー1ー1</p>
-                <p class="c-text">アクセス: 各線青山一丁目から徒歩10分</p>
+                <p class="c-text">TEL: {{ $shop->tel }}</p>
+                <p class="c-text">営業時間: {{ $open_time->time }}.〜.{{ $close_time->time }}</p>
+                <p class="c-text">定休日: {{ $shop->regular_holiday }}</p>
+                <p class="c-text">所在地: {{ $shop->location }}</p>
+                <p class="c-text">アクセス: {{ $shop->access }}</p>
                 <input type="submit" class="c-btn" value="お気に入り">
             </div>
         </div>
@@ -23,7 +23,9 @@
 
     <ul class="u-ul">
         <h1 class="c-info-title">同じ地域の買取店候補</h1>
-        <list-item-component></list-item-component>
+        @foreach($relateShops as $relateShop)
+            <list-item-component :name="{{ json_encode($relateShop->name) }}" img="{{ asset('/storage/shop_img/'.$relateShop->img) }}" shop-link="{{ route('shop.show', $relateShop->id)}}"></list-item-component>
+        @endforeach
     </ul>
 </div>
 

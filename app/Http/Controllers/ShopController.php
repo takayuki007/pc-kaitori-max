@@ -2,16 +2,69 @@
 
 namespace App\Http\Controllers;
 
+use App\Area;
+use App\Os;
+use App\Shop;
+use App\Time;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
-    public function new(){
-        return view('shop.new');
+    public function new()
+    {
+        $times = Time::get();
+        $oss = Os::get();
+        $areas = Area::get();
+        return view('shop.new')->with(['times'=>$times, 'oss'=>$oss, 'areas'=>$areas]);
     }
 
-    public function show()
+    public function store(Request $request)
     {
-        return view('shop.show');
+        $request->validate([
+            'shopName'=> 'required|string|max:255',
+            'img'=> 'required|file|image|mimes:jpeg,png|max:1000',
+            'tel'=> 'required|string|max:255',
+            'open_time' => 'required',
+            'close_time' => 'required',
+            'regular_holiday'=> 'required|string|max:255',
+            'location'=> 'required|string|max:255',
+            'access'=> 'required|string|max:255',
+            'area'=> 'required',
+            'os'=> 'required'
+        ]);
+
+        $shop = new Shop;
+
+        $shop->name = $request->shopName;
+        $path = $request->file('img')->store('public/shop_img');
+        $shop->img = basename($path);
+        $shop->tel = $request->tel;
+        $shop->open_time_id = $request->open_time;
+        $shop->close_time_id = $request->close_time;
+        $shop->regular_holiday = $request->regular_holiday;
+        $shop->location = $request->location;
+        $shop->access = $request->access;
+        $shop->area_id = $request->area;
+        $shop->os_id = $request->os;
+
+        $shop->save();
+
+        $shop = Shop::latest()->first();
+        $shop_id = $shop->id;
+
+        return redirect()->route('shop.show',['shop_id'=>$shop_id]);
+    }
+
+    public function show($id)
+    {
+        if(!ctype_digit($id)){
+            return redirect('top');
+        }
+
+        $shop = Shop::where('id', $id)->first();
+        $open_time = Time::where('id', $shop->open_time_id)->first();
+        $close_time = Time::where('id', $shop->close_time_id)->first();
+        $relateShops = Shop::where('area_id', $shop->area_id)->latest()->orderBy('id','desc')->take(10)->get();
+        return view('shop.show')->with(['shop'=>$shop, 'open_time'=>$open_time, 'close_time'=>$close_time, 'relateShops'=>$relateShops]);
     }
 }

@@ -109,6 +109,15 @@ return [
         'email'=>'メールアドレス',
         'password'=>'パスワード',
         'file'=>'画像',
+        'shop-name'=>'店舗名',
+        'tel'=> '電話番号',
+        'open_time'=> '開店時間',
+        'close_time'=> '閉店時間',
+        'regular_holiday'=> '定休日',
+        'location'=> '所在地',
+        'access'=> 'アクセス',
+        'area'=> '地域',
+        'os'=> 'OS',
 
     ],
 

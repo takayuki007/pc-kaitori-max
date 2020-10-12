@@ -1,12 +1,14 @@
 <template>
     <li class="u-li">
-        <div class="u-li-img">img</div>
-        <a href="#" class="u-li-a">PC高価買取店B店</a>
+<!--        <div class="u-li-img">img</div>-->
+        <img :src="`${img}`" class="u-li-img">
+        <a :href="`${shopLink}`" class="u-li-a">{{ name }}</a>
     </li>
 </template>
 
 <script>
     export default {
+        props: ['name','img', 'shopLink'],
         mounted() {
             console.log('Component mounted.')
         }
