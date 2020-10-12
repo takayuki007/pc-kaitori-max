@@ -40,8 +40,12 @@
                         <a href="{{ route('home')}}" class="l-a">マイページ</a>
                     </li>
                     <li class="l-li">
-                        <a href="#" class="l-a">ログアウト</a>
+                        <a href="{{ route('logout') }}" class="l-a" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">ログアウト</a>
                     </li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
                 @endguest
             </ul>
         </header>

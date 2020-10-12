@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'ユーザー登録')
+@section('description', 'ユーザー登録ページです。')
+@section('keywords', 'ユーザー登録ページ,PC買取,ピーシー買取')
+
 @section('content')
 <div class="p-site-width">
     <form method="POST" action="{{ route('register') }}" class="p-form">
