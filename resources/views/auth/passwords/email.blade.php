@@ -26,6 +26,8 @@
             </div>
         @endif
 
+        <div style="margin: 28px"></div>
+
         <input type="submit" class="c-btn" value="キーを発行する">
     </form>
 </div>
