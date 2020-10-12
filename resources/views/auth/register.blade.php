@@ -10,28 +10,37 @@
         <input type="text" class="c-input" name="name" value="{{ old('name') }}" placeholder="name">
 
         @error('name')
-            <span class="invalid-feedback" role="alert">
+            <span class="c-invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
+
+        <div style="margin-bottom: 32px"></div>
+
 
         <p class="c-text">Email</p>
         <input type="email" class="c-input" name="email" value="{{ old('email') }}" placeholder="email">
 
         @error('email')
-            <span class="invalid-feedback" role="alert">
+            <span class="c-invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
+
+        <div style="margin-bottom: 32px"></div>
+
 
         <p class="c-text">Password</p>
         <input type="password" class="c-input" name="password" placeholder="password">
 
         @error('password')
-            <span class="invalid-feedback" role="alert">
+            <span class="c-invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
+
+        <div style="margin-bottom: 32px"></div>
+
 
         <p class="c-text">Password Confirm</p>
         <input type="password" class="c-input" name="password_confirmation" placeholder="password confirm">
