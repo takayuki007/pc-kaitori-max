@@ -6,7 +6,8 @@
 
 @section('content')
     <div class="p-site-width">
-        <form action="" class="p-form" method="post">
+        <form action="{{ route('home.delete')}}" class="p-form" method="post">
+            @csrf
             <h1 class="c-title">退会</h1>
             <br>
             <br>

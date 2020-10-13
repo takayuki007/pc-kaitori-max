@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Favorite;
 use App\Shop;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class HomeController extends Controller
 {
+
+    use SoftDeletes;
+
     /**
      * Create a new controller instance.
      *
@@ -33,4 +38,13 @@ class HomeController extends Controller
         }
         return view('home')->with(['relateShops'=>$relateShops]);
     }
+
+    public function delete()
+    {
+        $user_id = Auth::id();
+        User::destroy($user_id);
+
+        return redirect('login');
+    }
+
 }

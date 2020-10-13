@@ -684,6 +684,32 @@ body {
   margin-bottom: 40px;
 }
 
+.u-btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: #AAB300;
+  border: none;
+  font-size: 16px;
+  font-family: "M PLUS 1p", sans-serif;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  color: #003300;
+}
+
+@media screen and (max-width: 480px) {
+  .u-btn {
+    height: 48px;
+    font-size: 12px;
+  }
+}
+
+.u-btn:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
 .u-li {
   display: flex;
   justify-content: flex-start;

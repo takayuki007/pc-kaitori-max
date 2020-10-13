@@ -7,6 +7,8 @@
 <div class="p-site-width">
     <div class="p-wrapper">
         <h1 class="c-title">マイページ</h1>
+        <a href="{{ route('unsubscribe.show')}}" class="u-btn">退会する</a>
+
         <div class="p-wrapper">
             <ul class="u-ul">
                 <h1 class="c-info-title">お気に入り店舗一覧</h1>
