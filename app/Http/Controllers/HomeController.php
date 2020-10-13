@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Favorite;
+use App\Shop;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $favorites = Favorite::where('user_id', Auth::id())->latest()->get();
+        foreach ($favorites as $key => $favorite){
+            $relateShops[] = Shop::where('id', $favorite->shop_id)->first();
+        }
+        return view('home')->with(['relateShops'=>$relateShops]);
     }
 }
