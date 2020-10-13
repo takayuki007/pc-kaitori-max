@@ -23,6 +23,7 @@ Route::get('/top', 'TopController@show')->name('top.show');
 Route::get('/shop/new', 'ShopController@new')->name('shop.new');
 Route::post('/shop/store', 'ShopController@store')->name('shop.store');
 Route::get('/shop/{id}/show', 'ShopController@show')->name('shop.show');
+Route::post('/shop/{id}/favorite', 'ShopController@favorite')->name('shop.favorite');
 
 Route::get('/result', 'SearchController@result')->name('search.result');
 

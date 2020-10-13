@@ -6,7 +6,8 @@
 
 @section('content')
 <div class="p-site-width">
-    <form class="p-form" method="post" action="">
+    <form class="p-form" method="post" action="{{ route('shop.favorite',$shop->id)}}">
+        @csrf
         <h1 class="c-info-title">{{ $shop->name }}</h1>
         <div class="p-info-area">
             <img src="{{ asset('/storage/shop_img/'.$shop->img) }}" class="c-info-img">
@@ -16,7 +17,15 @@
                 <p class="c-text">定休日: {{ $shop->regular_holiday }}</p>
                 <p class="c-text">所在地: {{ $shop->location }}</p>
                 <p class="c-text">アクセス: {{ $shop->access }}</p>
-                <input type="submit" class="c-btn" value="お気に入り">
+                @guest
+                    <input type="submit" class="c-btn-second" value="お気に入り">
+                @else
+                    @if($favorite === 0)
+                        <input type="submit" class="c-btn" value="お気に入り">
+                    @elseif($favorite === 1)
+                        <input type="submit" class="c-btn-second" value="お気に入り">
+                    @endif
+                @endguest
             </div>
         </div>
     </form>

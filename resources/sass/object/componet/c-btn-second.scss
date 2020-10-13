@@ -1,0 +1,22 @@
+//ボタン部分
+.c-btn-second{
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: $gray;
+    border: none;
+    font-size: $font-size-m;
+    font-family: $font-family-base;
+
+    @include sp(){
+        height: 48px;
+        font-size: $font-size-s;
+    }
+
+    &:hover{
+        cursor: pointer;
+        opacity: .75;
+    }
+}
+
+

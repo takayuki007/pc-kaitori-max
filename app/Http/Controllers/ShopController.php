@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Area;
+use App\Favorite;
 use App\Os;
 use App\Shop;
 use App\Time;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
+    //店舗登録画面を表示
     public function new()
     {
         $times = Time::get();
@@ -18,6 +21,7 @@ class ShopController extends Controller
         return view('shop.new')->with(['times'=>$times, 'oss'=>$oss, 'areas'=>$areas]);
     }
 
+    //店舗を登録する。
     public function store(Request $request)
     {
         $request->validate([
@@ -55,8 +59,10 @@ class ShopController extends Controller
         return redirect()->route('shop.show',['shop_id'=>$shop_id]);
     }
 
+    //店舗詳細ページを表示
     public function show($id)
     {
+        //数字以外ならリダイレクト
         if(!ctype_digit($id)){
             return redirect('top');
         }
@@ -65,6 +71,37 @@ class ShopController extends Controller
         $open_time = Time::where('id', $shop->open_time_id)->first();
         $close_time = Time::where('id', $shop->close_time_id)->first();
         $relateShops = Shop::where('area_id', $shop->area_id)->latest()->orderBy('id','desc')->take(10)->get();
-        return view('shop.show')->with(['shop'=>$shop, 'open_time'=>$open_time, 'close_time'=>$close_time, 'relateShops'=>$relateShops]);
+        $favorite = Favorite::where('user_id', Auth::id())->where('shop_id', $shop->id)->count();
+
+        return view('shop.show')->with(['shop'=>$shop, 'open_time'=>$open_time, 'close_time'=>$close_time, 'relateShops'=>$relateShops, 'favorite'=>$favorite]);
+    }
+
+    public function favorite($id)
+    {
+        //数字以外ならリダイレクト
+        if(!ctype_digit($id)){
+            return redirect('top');
+        }
+
+        $user_id = Auth::id();
+        $shop = Shop::find($id);
+        $shop_id = $shop->id;
+
+        $result = Favorite::where('user_id', $user_id)->where('shop_id', $shop_id)->count();
+
+        if($result === 1){
+            Favorite::where('user_id', $user_id)->where('shop_id', $shop_id)->delete();
+
+            return redirect()->route('shop.show',['shop_id'=>$shop_id]);
+
+        }elseif($result === 0){
+            $favorite = new Favorite;
+            $favorite->user_id = $user_id;
+            $favorite->shop_id = $shop_id;
+
+            $favorite->save();
+
+            return redirect()->route('shop.show',['shop_id'=>$shop_id]);
+        }
     }
 }
