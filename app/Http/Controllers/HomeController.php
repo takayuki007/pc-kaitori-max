@@ -7,12 +7,10 @@ use App\Shop;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class HomeController extends Controller
 {
 
-    use SoftDeletes;
 
     /**
      * Create a new controller instance.
@@ -31,18 +29,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        $relateShops = '';
         $favorites = Favorite::where('user_id', Auth::id())->latest()->get();
-        foreach ($favorites as $key => $favorite){
-            $relateShops[] = Shop::where('id', $favorite->shop_id)->first();
+        if(!empty($favorites)){
+            foreach ($favorites as $key => $favorite){
+                $relateShops[] = Shop::where('id', $favorite->shop_id)->first();
+            }
+            return view('home')->with(['relateShops'=>$relateShops]);
+        }else{
+            return view('home');
         }
-        return view('home')->with(['relateShops'=>$relateShops]);
     }
 
     public function delete()
     {
-        $user_id = Auth::id();
-        User::destroy($user_id);
+        User::find(Auth::id())->delete();
 
         return redirect('login');
     }
