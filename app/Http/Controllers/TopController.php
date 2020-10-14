@@ -30,12 +30,14 @@ class TopController extends Controller
     public function result($area_id, $os_id)
     {
         if(!empty($area_id) && !empty($os_id)){
-            $relateShops = Shop::where('area_id', $area_id)->where('os_id', $os_id)->paginate(20);
+            $relateShops = Shop::where('area_id', $area_id)->where('os_id', $os_id)->latest()->paginate(20);
         }elseif (!empty($area_id)){
-            $relateShops = Shop::where('area_id', $area_id)->paginate(20);
+            $relateShops = Shop::where('area_id', $area_id)->latest()->paginate(20);
 
         }elseif(!empty($os_id)){
-            $relateShops = Shop::where('os_id', $os_id)->paginate(20);
+            $relateShops = Shop::where('os_id', $os_id)->latest()->paginate(20);
+        }elseif(empty($area_id) && empty($os_id)){
+            $relateShops = Shop::latest()->paginate(20);
         }
 
         $oss = Os::get();

@@ -118,6 +118,8 @@ return [
         'access'=> 'アクセス',
         'area'=> '地域',
         'os'=> 'OS',
+        'shopName'=> '店舗名',
+        'img'=> '画像',
 
     ],
 
