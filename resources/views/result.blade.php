@@ -39,7 +39,7 @@
     </form>
 
     <div class="p-count-area">
-        <span class="c-text">{{ $count }}件の買取店があります。</span><span class="c-text">{{ $count }}件中　1ー{{ $count }}件を表示</span>
+        <span class="c-text">{{ $relateShops->total() }}件の買取店があります。</span><span class="c-text">{{ $relateShops->total() }}件中　{{ $relateShops->firstItem() }}ー{{ $relateShops->lastItem() }}件を表示</span>
     </div>
 
     <ul class="u-ul">

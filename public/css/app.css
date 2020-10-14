@@ -409,6 +409,8 @@ body {
   width: 30%;
   height: auto;
   background: #979797;
+  display: block;
+  margin-right: 40px;
 }
 
 @media screen and (max-width: 480px) {
@@ -432,6 +434,18 @@ body {
   .c-info-title {
     height: 48px;
     line-height: 48px;
+  }
+}
+
+.c-info-wrapper {
+  width: 70%;
+  height: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .c-info-wrapper {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -485,6 +499,7 @@ body {
   height: 48px;
   font-size: 16px;
   margin-bottom: 32px;
+  padding: 8px;
 }
 
 @media screen and (max-width: 480px) {
@@ -593,14 +608,14 @@ body {
 
 .p-info-area {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   border: 1px solid #979797;
   width: 100%;
   height: auto;
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 160px;
-  padding-right: 160px;
+  padding-left: 60px;
+  padding-right: 60px;
   box-sizing: border-box;
 }
 

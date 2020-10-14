@@ -31,20 +31,17 @@ class TopController extends Controller
     {
         if(!empty($area_id) && !empty($os_id)){
             $relateShops = Shop::where('area_id', $area_id)->where('os_id', $os_id)->paginate(20);
-            $count = Shop::where('area_id', $area_id)->where('os_id', $os_id)->count();
         }elseif (!empty($area_id)){
             $relateShops = Shop::where('area_id', $area_id)->paginate(20);
-            $count = Shop::where('area_id', $area_id)->count();
 
         }elseif(!empty($os_id)){
             $relateShops = Shop::where('os_id', $os_id)->paginate(20);
-            $count = Shop::where('os_id', $os_id)->count();
         }
 
         $oss = Os::get();
         $areas = Area::get();
 
 
-        return view('result')->with(['oss'=>$oss, 'areas'=>$areas, 'relateShops'=>$relateShops, 'count'=>$count]);
+        return view('result')->with(['oss'=>$oss, 'areas'=>$areas, 'relateShops'=>$relateShops]);
     }
 }

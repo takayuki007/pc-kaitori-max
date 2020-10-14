@@ -3,6 +3,8 @@
     width: 30%;
     height: auto;
     background: $gray;
+    display: block;
+    margin-right: $margin-ll;
 
     @include sp(){
         width: 100%;

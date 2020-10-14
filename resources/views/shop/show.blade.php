@@ -13,7 +13,7 @@
             <img src="{{ asset('/storage/shop_img/'.$shop->img) }}" class="c-info-img">
             <div class="c-info-wrapper">
                 <p class="c-text">TEL: {{ $shop->tel }}</p>
-                <p class="c-text">営業時間: {{ $open_time->time }}.〜.{{ $close_time->time }}</p>
+                <p class="c-text">営業時間: {{ $open_time->time }}〜{{ $close_time->time }}</p>
                 <p class="c-text">定休日: {{ $shop->regular_holiday }}</p>
                 <p class="c-text">所在地: {{ $shop->location }}</p>
                 <p class="c-text">アクセス: {{ $shop->access }}</p>
