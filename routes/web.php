@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return redirect('top.show');
+//});
 
 Auth::routes();
 
@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home/delete', 'HomeController@delete')->name('home.delete');
 Route::get('/unsubscribe', 'UnsubscribeController@show')->name('unsubscribe.show');
 
-Route::get('/top', 'TopController@show')->name('top.show');
+Route::get('/', 'TopController@show')->name('top.show');
 Route::post('/search', 'TopController@search')->name('top.search');
 Route::get('/result/{area_id}/{os_id}', 'TopController@result')->name('top.result');
 
