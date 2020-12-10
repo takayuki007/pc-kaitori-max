@@ -29,7 +29,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $relateShops = '';
+        $relateShops = array();
         $favorites = Favorite::where('user_id', Auth::id())->latest()->get();
         if(!empty($favorites)){
             foreach ($favorites as $key => $favorite){
