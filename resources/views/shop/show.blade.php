@@ -18,7 +18,7 @@
                 <p class="c-text">所在地: {{ $shop->location }}</p>
                 <p class="c-text">アクセス: {{ $shop->access }}</p>
                 @guest
-                    <input type="submit" class="c-btn-second" value="お気に入り">
+                    <a href="{{ route('login')}}" class="c-btn-second p-btn-link">お気に入り</a>
                 @else
                     @if($favorite === 0)
                         <input type="submit" class="c-btn" value="お気に入り">

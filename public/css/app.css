@@ -592,6 +592,13 @@ body {
   box-sizing: border-box;
 }
 
+.p-btn-link {
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 .p-count-area {
   width: 100%;
   display: flex;
