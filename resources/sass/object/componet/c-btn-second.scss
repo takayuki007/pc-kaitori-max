@@ -7,6 +7,8 @@
     border: none;
     font-size: $font-size-m;
     font-family: $font-family-base;
+    color: $white;
+    box-shadow: 4px 4px 8px $gray;
 
     @include sp(){
         height: 48px;

@@ -23,7 +23,7 @@
                     @if($favorite === 0)
                         <input type="submit" class="c-btn" value="お気に入り">
                     @elseif($favorite === 1)
-                        <input type="submit" class="c-btn-second" value="お気に入り">
+                        <input type="submit" class="c-btn-second" value="お気に入り解除">
                     @endif
                 @endguest
             </div>

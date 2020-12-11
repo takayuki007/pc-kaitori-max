@@ -15,7 +15,7 @@
                     <th class="c-th">エリア</th>
                     <td class="c-td">
                         <select name="area" class="c-search-select">
-                            <option value="0" class="c-search-option">選択してください。</option>
+                            <option value="0" class="c-search-option">全て</option>
                             @foreach($areas as $area)
                                 <option value="{{ $area->id }}" class="c-search-option" @if(old('area')== $area->id) selected  @endif>{{ $area->name }}</option>
                             @endforeach
@@ -26,7 +26,7 @@
                     <th class="c-th">OS</th>
                     <td class="c-td">
                         <select name="os" class="c-search-select">
-                            <option value="0" class="c-search-option">選択してください。</option>
+                            <option value="0" class="c-search-option">全て</option>
                             @foreach($oss as $os)
                                 <option value="{{ $os->id }}" class="c-search-option" @if(old('os')== $os->id) selected  @endif>{{ $os->name }}</option>
                             @endforeach
