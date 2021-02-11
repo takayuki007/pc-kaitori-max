@@ -5,4 +5,10 @@
     text-align: center;
     line-height: 120px;
     letter-spacing: 1.1em;
+
+    @include sp(){
+        line-height: 60px;
+        font-size: $font-size-ss;
+        letter-spacing: 0.4em;
+    }
 }

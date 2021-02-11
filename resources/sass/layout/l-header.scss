@@ -2,10 +2,11 @@
 .l-header{
     height: 72px;
     width: 100%;
-    background: $green;
+    //background: $green;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 3;
 
     @include sp(){
         width: 100%;

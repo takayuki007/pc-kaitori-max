@@ -5,45 +5,47 @@
 @section('keywords', 'TOPページ,PC買取,ピーシー買取')
 
 @section('content')
-<div class="p-site-width">
-    <form class="p-form" method="post" action="{{ route('top.search')}}">
-        @csrf
-        <div class="u-bg-img">
-
-        </div>
-        <h1 class="c-top-title">買取店検索</h1>
-        <div class="p-search-area">
-            <table class="c-table">
-                <tr class="c-tr">
-                    <th class="c-th">エリア</th>
-                    <td class="c-td">
-                        <select name="area" class="c-search-select">
-                            <option value="0" class="c-search-option">全て</option>
-                            @foreach($areas as $area)
+<div class="u-bg-img">
+    <div class="p-site-width">
+        <form class="p-top-form" method="post" action="{{ route('top.search')}}">
+            @csrf
+            <p class="c-text">日本最大級のPC買取点検索サイト</p>
+            <h1 class="c-top-main-title">PC買取MAX！！</h1>
+            <div class="p-top-search-area">
+<!--                <table class="c-table">-->
+<!--                    <tr class="c-tr">-->
+<!--                        <th class="c-th">エリア</th>-->
+<!--                        <td class="c-td">-->
+                            <select name="area" class="c-search-select">
+                                <option value="0" class="c-search-option">全て</option>
+                                @foreach($areas as $area)
                                 <option value="{{ $area->id }}" class="c-search-option" @if(old('area')== $area->id) selected  @endif>{{ $area->name }}</option>
-                            @endforeach
-                        </select>
-                    </td>
-                </tr>
-                <tr class="c-tr">
-                    <th class="c-th">OS</th>
-                    <td class="c-td">
-                        <select name="os" class="c-search-select">
-                            <option value="0" class="c-search-option">全て</option>
-                            @foreach($oss as $os)
+                                @endforeach
+                            </select>
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    <tr class="c-tr">-->
+<!--                        <th class="c-th">OS</th>-->
+<!--                        <td class="c-td">-->
+                            <select name="os" class="c-search-select">
+                                <option value="0" class="c-search-option">全て</option>
+                                @foreach($oss as $os)
                                 <option value="{{ $os->id }}" class="c-search-option" @if(old('os')== $os->id) selected  @endif>{{ $os->name }}</option>
-                            @endforeach
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            <input type="submit" class="c-btn" value="検索">
-        </div>
-    </form>
-
+                                @endforeach
+                            </select>
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+            </div>
+            <input type="submit" class="c-top-btn" value="検索">
+        </form>
+    </div>
+</div>
+<div class="u-space"></div>
+<div class="p-site-width">
     <div class="c-banner-area">
         <div class="c-banner">
-<!--            <p class="c-banner-text-rotate">買取強化中</p>-->
+            <!--            <p class="c-banner-text-rotate">買取強化中</p>-->
             <p class="c-banner-text">今月の買取強化店舗一覧はこちら！！</p>
         </div>
     </div>
@@ -59,9 +61,8 @@
     <ul class="u-ul">
         <h1 class="c-top-title">最新買取店情報</h1>
         @foreach($relateShops as $relateShop)
-            <list-item-component :name="{{ json_encode($relateShop->name) }}" img="{{ asset('/storage/shop_img/'.$relateShop->img) }}" shop-link="{{ route('shop.show', $relateShop->id)}}"></list-item-component>
+        <list-item-component :name="{{ json_encode($relateShop->name) }}" img="{{ asset('/storage/shop_img/'.$relateShop->img) }}" shop-link="{{ route('shop.show', $relateShop->id)}}"></list-item-component>
         @endforeach
     </ul>
 </div>
-
 @endsection
