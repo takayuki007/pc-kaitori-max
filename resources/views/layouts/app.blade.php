@@ -115,19 +115,19 @@
                 <p class="l-footer-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取</a></p>
                 <ul class="l-footer-ul">
                     <li class="l-footer-li">
-                        <a href="{{ route('info.show')}}" class="l-footer-a">店舗掲載について</a>
+                        <a href="{{ route('info.show')}}" class="l-a">店舗掲載について</a>
                     </li>
                     <li class="l-footer-li">
-                        <a href="{{ route('rule.show')}}" class="l-footer-a">利用規約</a>
+                        <a href="{{ route('rule.show')}}" class="l-a">利用規約</a>
                     </li>
                     <li class="l-footer-li">
-                        <a href="{{ route('privacy.show')}}" class="l-footer-a">プライバシーポリシー</a>
+                        <a href="{{ route('privacy.show')}}" class="l-a">プライバシーポリシー</a>
                     </li>
                     <li class="l-footer-li">
-                        <a href="{{ route('transaction.show')}}" class="l-footer-a">特定商取引法に基づく表記</a>
+                        <a href="{{ route('transaction.show')}}" class="l-a">特定商取引法に基づく表記</a>
                     </li>
                     <li class="l-footer-li">
-                        <a href="{{ route('contact.show')}}" class="l-footer-a">お問合せ</a>
+                        <a href="{{ route('contact.show')}}" class="l-a">お問合せ</a>
                     </li>
                 </ul>
             </div>
