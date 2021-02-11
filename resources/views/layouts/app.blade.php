@@ -28,7 +28,7 @@
         <header class="l-header">
             <div class="l-logo-wrapper">
                 <p class="l-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取MAX</a></p>
-                <p class="l-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取MAXとは</a></p>
+                <p class="l-logo"><a href="#what" class="l-a">PC買取MAXとは</a></p>
                 <p class="l-logo"><a href="{{ route('info.show')}}" class="l-a">店舗掲載について</a></p>
             </div>
             <ul class="l-ul">
@@ -112,7 +112,7 @@
         <!--フッター始まり-->
         <footer class="l-footer">
             <div class="l-footer-wrap">
-                <p class="l-footer-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取</a></p>
+                <p class="l-footer-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取MAX</a></p>
                 <ul class="l-footer-ul">
                     <li class="l-footer-li">
                         <a href="{{ route('info.show')}}" class="l-a">店舗掲載について</a>
@@ -131,7 +131,7 @@
                     </li>
                 </ul>
             </div>
-            <p class="l-text">Copyright © PC買取. All Rights Reserved</p>
+            <p class="l-text">Copyright © PC買取MAX. All Rights Reserved</p>
         </footer>
         <!--フッター終わり-->
     </div>

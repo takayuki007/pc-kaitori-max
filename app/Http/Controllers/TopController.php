@@ -14,7 +14,7 @@ class TopController extends Controller
         $oss = Os::get();
         $areas = Area::get();
 
-        $relateShops = Shop::latest()->take(10)->get();
+        $relateShops = Shop::latest()->take(5)->get();
 
         return view('top')->with(['oss'=>$oss, 'areas'=>$areas, 'relateShops'=>$relateShops]);
     }
