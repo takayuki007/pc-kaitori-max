@@ -26,7 +26,11 @@
     <div id="app" class="l-wrapper">
         <!--ヘッダー始まり-->
         <header class="l-header">
-            <p class="l-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取</a></p>
+            <div class="l-logo-wrapper">
+                <p class="l-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取MAX</a></p>
+                <p class="l-logo"><a href="{{ route('top.show')}}" class="l-a">PC買取MAXとは</a></p>
+                <p class="l-logo"><a href="{{ route('info.show')}}" class="l-a">店舗掲載について</a></p>
+            </div>
             <ul class="l-ul">
                 @guest
                     <li class="l-li">
